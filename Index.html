@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="javaS.js"></script>
+    <main>
+        <h1>Formulario a londres</h1>
+            <label>
+                Nombre: <br>
+                <input type="text">
+            </label> <br>
+            <label>
+                Edad: <p id="edadError"></p> <br>
+                <input type="number" id="edad" min="0" max="100">
+            </label> <br>
+            <label>
+                Nota promedio de inglés primer año: <p id="nota1Error"></p> <br>
+                <input type="number" id="nota1" min="0" max="10">
+            </label> <br>
+            <label>
+                Nota promedio de inglés segundo año: <p id="nota2Error"></p> <br>
+                <input type="number" id="nota2" min="0" max="10">
+            </label> <br>
+            <label>
+                Temas aprovados: <p id="temasError"></p> <br>
+                <select id="temas">
+                    <option value="L">Listening</option>
+                    <option value="W">Writing</option>
+                    <option value="A">Ambos</option>
+                </select>
+            </label> <br>
+            <label>
+                <p id="viajeError"></p>
+                Desea realizar el viaje a Londres: <input type="checkbox" id="viaje">
+            </label> <br>
+            <button onclick="verificarDatos()">Enviar</button>
+    </main>
+</body>
+</html>
