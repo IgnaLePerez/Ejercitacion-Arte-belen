@@ -1,42 +1,73 @@
+// Inputs
+const inputNombre = document.getElementById("nombre");
+const inputEdad = document.getElementById("edad");
+const inputNota1 = document.getElementById("nota1");
+const inputNota2 = document.getElementById("nota2");
+const inputTemas = document.getElementById("temas");
+const inputViaje = document.getElementById("viaje");
+
+// Mensajes de error
+const errorNombre = document.getElementById("nombre-error");
+const errorEdad = document.getElementById("edad-error");
+const errorNota1 = document.getElementById("nota1-error");
+const errorNota2 = document.getElementById("nota2-error");
+const errorTemas = document.getElementById("temas-error");
+const errorViaje = document.getElementById("viaje-error");
+
 function verificarDatos(){
-    let edad = document.getElementById("edad").value;
-    let nota1 = document.getElementById("nota1").value;
-    let nota2 = document.getElementById("nota2").value;
-    let temas = document.getElementById("temas").value;
-    let viaje = document.getElementById("viaje").checked;
+    const nombre = inputNombre.value;
+    const edad = inputEdad.value;
+    const nota1 = inputNota1.value;
+    const nota2 = inputNota2.value;
+    const temas = inputTemas.value;
+    const viaje = inputViaje.checked;
     
-    if (edad < 14 || edad > 17){
-        document.getElementById("edadError").innerHTML = "La edad debe estar entre 14 y 17 años";
-        document.getElementById("edadError").style.color = "red";
+
+    if (nombre.trim() === ""){
+        inputNombre.style.border = "1px solid red";
+        errorNombre.hidden = false;
     } else {
-        document.getElementById("edadError").innerHTML = "";
+        inputNombre.style.border = "1px solid green";
+        errorNombre.hidden = true;
+    }
+
+    if (edad < 14 || edad > 17){
+        inputEdad.style.border = "1px solid red";
+        errorEdad.hidden = false;
+    } else {
+        inputEdad.style.border = "1px solid green";
+        errorEdad.hidden = true;        
     }
 
     if (nota1 < 8){
-        document.getElementById("nota1Error").innerHTML = "La nota 1 debe ser mayor o igual a 8";
-        document.getElementById("nota1Error").style.color = "red";
+        inputNota1.style.border = "1px solid red";
+        errorNota1.hidden = false;
     } else {
-        document.getElementById("nota1Error").innerHTML = "";
+        inputNota1.style.border = "1px solid green";
+        errorNota1.hidden = true;
     }
 
     if (nota2 < 8){
-        document.getElementById("nota2Error").innerHTML = "La nota 2 debe ser mayor o igual a 8";
-        document.getElementById("nota2Error").style.color = "red";
+        inputNota2.style.border = "1px solid red";
+        errorNota2.hidden = false;
     } else {
-        document.getElementById("nota2Error").innerHTML = "";
+        inputNota2.style.border = "1px solid green";
+        errorNota2.hidden = true;
     }
 
     if (temas != "A"){
-        document.getElementById("temasError").innerHTML = "Debe aprobar ambos temas";
-        document.getElementById("temasError").style.color = "red";
+        inputTemas.style.border = "1px solid red";
+        errorTemas.hidden = false;
     } else {
-        document.getElementById("temasError").innerHTML = "";
+        inputTemas.style.border = "1px solid green";
+        errorTemas.hidden = true;
     }
 
     if (!viaje){
-        document.getElementById("viajeError").innerHTML = "Debe estar dispuesto a viajar";
-        document.getElementById("viajeError").style.color = "red";
-    }  else {
-        document.getElementById("viajeError").innerHTML = "";
+        inputViaje.style.border = "1px solid red";
+        errorViaje.hidden = false;
+    } else {
+        inputViaje.style.border = "1px solid green";
+        errorViaje.hidden = true;
     }
 }

@@ -4,40 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="javaS.js"></script>
+    <header>
+        <h1>Formulario de verificación de viaje a Londres</h1>
+    </header>
     <main>
-        <h1>Formulario a londres</h1>
-            <label>
-                Nombre: <br>
-                <input type="text">
-            </label> <br>
-            <label>
-                Edad: <p id="edadError"></p> <br>
-                <input type="number" id="edad" min="0" max="100">
-            </label> <br>
-            <label>
-                Nota promedio de inglés primer año: <p id="nota1Error"></p> <br>
-                <input type="number" id="nota1" min="0" max="10">
-            </label> <br>
-            <label>
-                Nota promedio de inglés segundo año: <p id="nota2Error"></p> <br>
-                <input type="number" id="nota2" min="0" max="10">
-            </label> <br>
-            <label>
-                Temas aprovados: <p id="temasError"></p> <br>
-                <select id="temas">
-                    <option value="L">Listening</option>
-                    <option value="W">Writing</option>
-                    <option value="A">Ambos</option>
-                </select>
-            </label> <br>
-            <label>
-                <p id="viajeError"></p>
-                Desea realizar el viaje a Londres: <input type="checkbox" id="viaje">
-            </label> <br>
+        <div>
+            <label for="nombre">Nombre:</label> <br>
+            <input type="text" id="nombre"> <br>
+            <p id="nombre-error" hidden>El nombre es obligatorio.</p> <br>
+
+            <label for="edad">Edad:</label> <br>
+            <input type="number" id="edad" min="0" max="100"> <br>
+            <p id="edad-error" hidden>La edad debe ser un número entre 14 y 17.</p> <br>
+
+            <label for="nota1">Nota promedio de inglés primer año:</label> <br>
+            <input type="number" id="nota1" min="0" max="10"> <br>
+            <p id="nota1-error" hidden>La nota debe ser mayor a 8.</p> <br>
+
+            <label for="nota2">Nota promedio de inglés segundo año:</label> <br>
+            <input type="number" id="nota2" min="0" max="10"> <br>
+            <p id="nota2-error" hidden>La nota debe ser mayor a 8.</p> <br>
+
+            <label for="temas">Temas aprobados:</label> <br>
+            <select id="temas">
+                <option value="L">Listening</option>
+                <option value="W">Writing</option>
+                <option value="A">Ambos</option>
+            </select> <br>
+            <p id="temas-error" hidden>Debe seleccionar ambos temas.</p> <br>
+
+            <input class="checkbox" type="checkbox" id="viaje">
+            <label for="viaje">Desea realizar el viaje a Londres:</label> <br>
+            <p id="viaje-error" hidden>Debe aceptar ir al viaje.</p> <br>
+
             <button onclick="verificarDatos()">Enviar</button>
+        </div>
     </main>
+    <script src="javaS.js"></script>
 </body>
 </html>
