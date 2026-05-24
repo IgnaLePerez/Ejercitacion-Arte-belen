@@ -92,11 +92,11 @@ function verificarDatos(){
 }
 
 function cambiarModo(){
-    const contrasteOscuro = "#d8d8d8"
+    const contrasteOscuro = "#b1b1b1"
     const fondoOscuro = "#100c22"
     const fondoBtnOscuro = "#0b0817";
     const bordeOscuro = "1px solid " + contrasteOscuro
-    const letraOscuro = contrasteOscuro
+    const letraOscuro = "white"
     const sombraOscuro = "-10px -10px 20px 0px " + contrasteOscuro
 
     const contrasteClaro = "grey"
@@ -104,7 +104,7 @@ function cambiarModo(){
     const fondoBtnClaro = "#f2f2f2";
     const bordeClaro = "1px solid " + contrasteClaro
     const letraClaro = "#000000"
-    const sombraClaro = "-10px -10px 20px 0px " + contrasteClaro
+    const sombraClaro = "-10px -10px 20px 0px #b7b0b0"
     
     if (main.estado === "claro"){
         console.log("Entró")
