@@ -7,28 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Formulario de verificación de viaje a Londres</h1>
+    <header id="header">
+        <h1 id="titulo">Formulario de verificación de viaje a Londres</h1>
     </header>
-    <main>
-        <div>
-            <label for="nombre">Nombre:</label> <br>
+    <main id="main" estado="claro">
+        <button id="btnCambiarModo" class="botonNocturno" onclick="cambiarModo()">Cambiar Modo</button>
+        <div id="formulario" class="Formulario">
+            <label id="labelNombre" for="nombre">Nombre:</label> <br>
             <input type="text" id="nombre"> <br>
             <p id="nombre-error" hidden>El nombre es obligatorio.</p> <br>
 
-            <label for="edad">Edad:</label> <br>
+            <label id="labelEdad" for="edad">Edad:</label> <br>
             <input type="number" id="edad" min="0" max="100"> <br>
             <p id="edad-error" hidden>La edad debe ser un número entre 14 y 17.</p> <br>
 
-            <label for="nota1">Nota promedio de inglés primer año:</label> <br>
+            <label id="labelNota1" for="nota1">Nota promedio de inglés primer año:</label> <br>
             <input type="number" id="nota1" min="0" max="10"> <br>
             <p id="nota1-error" hidden>La nota debe ser mayor a 8.</p> <br>
 
-            <label for="nota2">Nota promedio de inglés segundo año:</label> <br>
+            <label id="labelNota2" for="nota2">Nota promedio de inglés segundo año:</label> <br>
             <input type="number" id="nota2" min="0" max="10"> <br>
             <p id="nota2-error" hidden>La nota debe ser mayor a 8.</p> <br>
 
-            <label for="temas">Temas aprobados:</label> <br>
+            <label id="labelTemas" for="temas">Temas aprobados:</label> <br>
             <select id="temas">
                 <option value="L">Listening</option>
                 <option value="W">Writing</option>
@@ -37,10 +38,10 @@
             <p id="temas-error" hidden>Debe seleccionar ambos temas.</p> <br>
 
             <input class="checkbox" type="checkbox" id="viaje">
-            <label for="viaje">Desea realizar el viaje a Londres:</label> <br>
+            <label id="labelViaje" for="viaje">Desea realizar el viaje a Londres:</label> <br>
             <p id="viaje-error" hidden>Debe aceptar ir al viaje.</p> <br>
 
-            <button onclick="verificarDatos()">Enviar</button>
+            <button id="btnEnviar" onclick="verificarDatos()">Enviar</button>
         </div>
     </main>
     <script src="javaS.js"></script>
