@@ -20,7 +20,7 @@ header h1{
 main{
     width: 100%;
     float: left;
-    transition: background 0.3s ease;
+    transition: background 1s ease;
 }
 
 main .botonNocturno{
@@ -48,7 +48,7 @@ main .Formulario{
     border: 1px solid grey;
     border-radius: 12px;
     box-shadow: -10px -10px 20px 0px #b7b0b0;
-    transition: transform 0.3s ease, background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.6s ease, background 0.3s ease, border 0.3s ease, box-shadow 0.6s ease;
 }
 
 main .Formulario:hover{
@@ -58,7 +58,7 @@ main .Formulario:hover{
 main .Formulario label{
     width: 100%;
     font-size: 1em;
-    transition: color 0.3s ease;
+    transition: color 0.6s ease;
 }
 
 main .Formulario input{
