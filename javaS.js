@@ -92,6 +92,7 @@ function verificarDatos(){
 }
 
 function cambiarModo(){
+    // Configuracion modo oscuro
     const contrasteOscuro = "#b1b1b1"
     const fondoOscuro = "#100c22"
     const fondoBtnOscuro = "#0b0817";
@@ -99,6 +100,7 @@ function cambiarModo(){
     const letraOscuro = "white"
     const sombraOscuro = "-10px -10px 20px 0px " + contrasteOscuro
 
+    // Configuracion modo claro
     const contrasteClaro = "grey"
     const fondoClaro = "#FFFFFF"
     const fondoBtnClaro = "#f2f2f2";
